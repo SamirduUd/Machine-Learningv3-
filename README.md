@@ -1,2 +1,1 @@
-# Machine-Learningv3-hello Samir1
-hello Samir2
+[![CircleCI](https://circleci.com/gh/SamirduUd/Machine-Learningv3-.svg?style=svg)](https://circleci.com/gh/SamirduUd/Machine-Learningv3-)
