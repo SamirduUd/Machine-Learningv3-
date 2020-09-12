@@ -5,7 +5,7 @@ This project is to operationalize a Machine Learning Microservice API. The Machi
 # 2 Project Activities
 ## Setup the environment
 Create a virtual environment and source it
-	python3 -m venv <your_venv>
+	'python3 -m venv <your_venv>'
 	source <your_venv>/bin/activate
 
 Install the necessary dependencies
