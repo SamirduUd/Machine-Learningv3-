@@ -1,0 +1,11 @@
+sudo snap install conjure-up --classic
+
+sudo snap install lxd
+/snap/bin/lxd init  #  Notice there is NO __sudo__ prepended here.
+
+/snap/bin/lxd.migrate   NO NEED
+
+sudo usermod -a -G lxd $USER
+newgrp lxd
+
+sudo lxc launch ubuntu:16.04 u1

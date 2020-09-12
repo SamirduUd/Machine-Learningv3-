@@ -1,0 +1,32 @@
+New venv
+    python3 -m venv ~/.MLv4
+    source ~/.MLv4/bin/activate
+
+alias for venv
+    alias MLv3="cd /home/ubuntu/environment/Machine-Learningv3- && source ~/.MLv3/bin/activate"
+    
+
+Create Managed Kub cluster
+
+    eksctl create cluster \
+--name my-kub-cluster \
+--version 1.17 \
+--region us-east-2 \
+--nodegroup-name linux-nodes \
+--nodes 3 \
+--nodes-min 1 \
+--nodes-max 1 \
+--ssh-access \
+--ssh-public-key EC2Docker \
+--managed
+
+
+#Create kubeconfig
+aws eks --region us-east-2 update-kubeconfig --name my-cluster
+
+aws eks update-kubeconfig --name my-kub-cluster --region us-east-2
+
+aws eks update-kubeconfig --name my-cluster --region us-east-2 --role-arn arn:aws:iam::XXXXXXXXXXXX:role/testrole
+
+#create Kubernetes deployment
+kubectl run MachineLearningKube --image=206893810529.dkr.ecr.us-east-2.amazonaws.com/machine-learning-v4 --requests=cpu=500m --expose --port=80
