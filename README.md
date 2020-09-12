@@ -10,8 +10,12 @@ Create a virtual environment and source it
 	source <your_venv>/bin/activate
 ```
 Install the necessary dependencies
+```
 	make install 
-	
+```
+
 ## Run Docker
+```
 	./run_docker.sh
 	./upload_docker.sh
+```
